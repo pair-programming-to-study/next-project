@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 type Result<T> = (node: T | null) => void;
 
@@ -13,6 +13,7 @@ export function useIntersectionObserver<T extends HTMLElement>(
     if (node) {
       observer.current?.observe(node);
       setTarget(node);
+      git;
     }
   }, []);
 

@@ -1,5 +1,5 @@
-import { useIntersectionObserver } from "./useIntersectionObserver";
-import { useCallback } from "react";
+import { useIntersectionObserver } from './useIntersectionObserver';
+import { useCallback } from 'react';
 
 export function useInfiniteScroll<T extends HTMLElement>(
   onLoadMore: () => unknown,
@@ -7,6 +7,7 @@ export function useInfiniteScroll<T extends HTMLElement>(
 ) {
   const subscriber = useCallback(
     ([entry]: IntersectionObserverEntry[]) => {
+      console.log('entry', entry);
       if (!entry?.isIntersecting) {
         return;
       }
